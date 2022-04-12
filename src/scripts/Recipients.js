@@ -6,7 +6,7 @@ export const Recipients = () => {
         () => {
             const recipients = getRecipients()
             let html = '<label class="label" for="recipient">Recipient</label>'
-            html += '<select id=recipients">'
+            html += '<select id="recipients">'
             html += '<option value="0"></option>'
             const arrayOfOptions = recipients.map((recipient) => {
                 if (state.recipients === recipient.id) {

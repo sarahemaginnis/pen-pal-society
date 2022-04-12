@@ -7,10 +7,10 @@ const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "sendLetter") {
-        const userAuthor = document.querySelector("input[for='author']").value
-        const userLetter = document.querySelector("input[for='letter']").value
-        const userTopic = document.querySelector("input[for='topic']").value
-        const userRecipient = document.querySelector("input[for='recipient']").value
+        const userAuthor = document.querySelector('#authors').value
+        const userLetter = document.querySelector('#letterEntryInput').value
+        const userTopic = document.querySelector("input[name='topic']").value
+        const userRecipient = document.querySelector('#recipients').value
         const userDate = document.getElementById('sendLetter').innerHTML = Date()
 
         const dataToSendtoAPI = {
@@ -34,8 +34,7 @@ export const LetterForm = () => {
             <label class="label" for="letter">Letter</label>
             <textarea type="textarea" name="letterEntry" id="letterEntryInput" class="letterForm_letterEntry"></textarea>
         </div>
-        <div class="field">
-            <label class="label" for="topic">Topics</label>
+        <div class="field" id="topicDiv">
             ${Topics()}
         </div>
         <div class="field" id="recipientDiv">
