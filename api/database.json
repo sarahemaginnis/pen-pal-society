@@ -1,0 +1,70 @@
+{
+    "authors": [
+        {
+            "id": "1",
+            "authorName": "Cecilia Bassingthwaite",
+            "authorEmail": "cecelia@cecilia.com"
+        },
+        {
+            "id": "2",
+            "authorName": "Eduardo de Luca",
+            "authorEmail": "eduardo@eduardo.com"
+        },
+        {
+            "id": "3",
+            "authorName": "Isabella Armitage",
+            "authorEmail": "isabella@isabella.com"
+        },
+        {
+            "id": "4",
+            "authorName": "Alexander O'Riley",
+            "authorEmail": "alexander@alexander.com"
+        }
+    ],
+    "topics": [
+        {
+            "id": "1",
+            "topicName": "Business"
+        },
+        {
+            "id": "2",
+            "topicName": "Friendly"
+        },
+        {
+            "id": "3",
+            "topicName": "Family"
+        },
+        {
+            "id": "4",
+            "topicName": "Congratulations"
+        },
+        {
+            "id": "5",
+            "topicName": "Condolences"
+        }
+    ],
+    "recipients": [
+        {
+            "id": "1",
+            "recipientName": "Ned Lightbourne",
+            "recipientEmail": "ned@ned.com"
+        },
+        {
+            "id": "2",
+            "recipientName": "Patrick Morvath",
+            "recipientEmail": "patrick@patrick.com"
+        },
+        {
+            "id": "3",
+            "recipientName": "Jane Fairweather",
+            "recipientEmail": "jane@jane.com"
+        },
+        {
+            "id": "4",
+            "recipientName": "Teddy Luxe",
+            "recipientEmail": "teddy@teddy.com"
+        }
+    ],
+    "letters": [
+    ]
+}

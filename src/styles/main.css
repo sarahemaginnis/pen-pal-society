@@ -1,0 +1,26 @@
+@import "letters.css";
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Bebas+Neue&family=IM+Fell+English+SC&family=Lavishly+Yours&family=Libre+Baskerville&family=Lora&display=swap');
+/* Typography */
+/*Play around with additional CSS styling here*/
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Babylonica', cursive;
+}
+
+#sendLetter {
+    margin: 1rem 0 2rem 2rem;
+    padding: 0.5rem;
+    background-color: #8D5297;
+    color: #dbc744;
+    font-size: 1rem;
+}
