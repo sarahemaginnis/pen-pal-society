@@ -1,17 +1,32 @@
-import { getLetters } from "./dataAccess.js"
+import { getAuthors, getLetters, getRecipients, getTopics } from "./dataAccess.js"
 
 export const Letters = () => {
+    const recipients = getRecipients()
+    const authors = getAuthors()
+    const topics = getTopics()
     const letters = getLetters()
-    let html = '<p>'
-    const converLetterToParagraph = letters.map((letter) => {
+    let html = '<section class="letter">'
+    const convertLetterToParagraph = letters.map((letter) => {
+        const letterAuthor = authors.find((author) => {
+            return author.id === letter.author
+        })
+        const letterRecipient = recipients.find((recipient) => {
+            return recipient.id === letter.recipient
+        })
+        const letterTopic = topics.find((topic) => {
+            return topic.id === letter.topic
+        })
         return `
-        Dear ${letter.recipient.recipientName} (${letter.recipient.recipientEmail}),</p>
-        <p>${letter.body}</p>
-        <p>Sincerely ${letter.author.authorName} (${letter.author.authorEmail})</p>
-        <p>Sent on ${letter.date}</p>
-        <button class="topic" id="topic--${letter.topic.id}">${letter.topic.topicName}</button>
-        `
+                <div id="letter">
+                <p>Dear ${letterRecipient.recipientName} (${letterRecipient.recipientEmail}),</p>
+                <p>${letter.body}</p>
+                <p>Sincerely ${letterAuthor.authorName} (${letterAuthor.authorEmail})</p>
+                <p>Sent on ${letter.date}</p>
+                <button class="topic" id="topic--${letterTopic.id}">${letterTopic.topicName}</button>
+            `
     })
-    html += converLetterToParagraph.join("")
+    html += '</div>'
+    html += convertLetterToParagraph.join("")
+    html += '</section>'
     return html
 }

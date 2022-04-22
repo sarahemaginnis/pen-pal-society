@@ -41,7 +41,7 @@ export const sendLetter = (draftLetter) => {
         body: JSON.stringify(draftLetter)
     }
 
-    return fetch(`${API}/requests`, fetchOptions)
+    return fetch(`${API}/letters`, fetchOptions)
         .then(response => response.json())
         .then(() => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))

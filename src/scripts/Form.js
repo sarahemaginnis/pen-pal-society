@@ -11,7 +11,7 @@ mainContainer.addEventListener("click", clickEvent => {
         const userLetter = document.querySelector('#letterEntryInput').value
         const userTopic = document.querySelector("input[name='topic']").value
         const userRecipient = document.querySelector('#recipients').value
-        const userDate = document.getElementById('sendLetter').innerHTML = Date()
+        const userDate = document.getElementById('sendLetter').innerHTML = new Date().toLocaleDateString()
 
         const dataToSendtoAPI = {
             author: userAuthor,
